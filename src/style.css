@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-chewy: "Chewy", cursive;
+  --font-fredoka: "Fredoka", sans-serif;
+}
