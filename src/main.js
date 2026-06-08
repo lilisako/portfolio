@@ -12,15 +12,15 @@ const projects = [
     name: "adtech-note",
     description: "Practical AdTech: Engineering Notes with Code and Examples",
     url: "https://adtech.risako.dev/",
-    language: "Markdown",
-    languageColor: "#083fa1",
+    language: "JavaScript",
+    languageColor: "#f1e05a",
   },
   {
     name: "tech-blog",
     description: "More Projects and Tech Notes",
     url: "https://note.com/risakodev",
-    language: "JavaScript",
-    languageColor: "#f1e05a",
+    language: "Markdown",
+    languageColor: "#083fa1",
   },
 ];
 
