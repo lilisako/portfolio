@@ -37,6 +37,14 @@ const projects = [
     language: "Markdown",
     languageColor: "#083fa1",
   },
+  {
+    name: "cheatsheet",
+    description:
+      "A curated list of commands that I regularly use in web development",
+    url: "/cheatsheet/",
+    language: "Markdown",
+    languageColor: "#083fa1",
+  },
 ];
 
 const repoIcon = `
@@ -57,11 +65,14 @@ projects.forEach((project) => {
   const badgeClass =
     "text-xs leading-none border border-[#d0d7de] rounded-full px-2 py-1 text-[#656d76] bg-[#f6f8fa] font-medium";
 
+  const isExternal = project.url?.startsWith("http");
   const card = document.createElement(isPrivate ? "div" : "a");
   if (!isPrivate) {
     card.href = project.url;
-    card.target = "_blank";
-    card.rel = "noopener noreferrer";
+    if (isExternal) {
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+    }
   }
   card.className = isPrivate
     ? "block m-1 rounded-lg border border-[#d0d7de] bg-white min-h-[160px] flex flex-col p-5 pt-5 text-left shadow-sm cursor-default"

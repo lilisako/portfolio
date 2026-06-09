@@ -4,3 +4,33 @@
   --font-chewy: "Chewy", cursive;
   --font-fredoka: "Fredoka", sans-serif;
 }
+
+.cheatsheet h1 {
+  font-family: var(--font-chewy);
+  font-size: 2.25rem;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+.cheatsheet h2 {
+  font-family: var(--font-chewy);
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cheatsheet p {
+  color: #656d76;
+  line-height: 1.625;
+}
+
+.cheatsheet pre {
+  background: white;
+  border: 1px solid #d0d7de;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  margin-top: 0.5rem;
+}
