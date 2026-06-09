@@ -2,6 +2,13 @@ import "./style.css";
 
 const projects = [
   {
+    name: "tickedo",
+    description: "Ticketing practice game built with Flask",
+    url: "https://tickedo.net",
+    language: "Python",
+    languageColor: "#3572A5",
+  },
+  {
     name: "design-patterns-note",
     description: "Design Patterns Examples in Python",
     url: "https://design-pattern.risako.dev/",
