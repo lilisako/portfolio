@@ -2,6 +2,14 @@ import "./style.css";
 
 const projects = [
   {
+    name: "teleuni",
+    description: "Open-Course study tracker built with Flask",
+    language: "Python",
+    languageColor: "#3572A5",
+    status: "private",
+    comingSoon: true,
+  },
+  {
     name: "tickedo",
     description: "Ticketing practice game built with Flask",
     url: "https://tickedo.net",
@@ -40,18 +48,30 @@ const repoIcon = `
 const container = document.getElementById("projects");
 
 projects.forEach((project) => {
-  const card = document.createElement("a");
-  card.href = project.url;
-  card.target = "_blank";
-  card.rel = "noopener noreferrer";
-  card.className =
-    "block m-1 rounded-lg border border-[#d0d7de] bg-white hover:bg-[#f6f8fa] transition-colors duration-200 min-h-[160px] flex flex-col p-5 pt-5 text-left shadow-sm";
+  const isPrivate = project.status === "private";
+  const badgeLabel = isPrivate
+    ? project.comingSoon
+      ? "Private - coming soon"
+      : "Private"
+    : "Public";
+  const badgeClass =
+    "text-xs leading-none border border-[#d0d7de] rounded-full px-2 py-1 text-[#656d76] bg-[#f6f8fa] font-medium";
+
+  const card = document.createElement(isPrivate ? "div" : "a");
+  if (!isPrivate) {
+    card.href = project.url;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+  }
+  card.className = isPrivate
+    ? "block m-1 rounded-lg border border-[#d0d7de] bg-white min-h-[160px] flex flex-col p-5 pt-5 text-left shadow-sm cursor-default"
+    : "block m-1 rounded-lg border border-[#d0d7de] bg-white hover:bg-[#f6f8fa] transition-colors duration-200 min-h-[160px] flex flex-col p-5 pt-5 text-left shadow-sm";
   card.innerHTML = `
       <div class="flex flex-col flex-1">
         <div class="flex items-center gap-2 flex-wrap pr-8">
           ${repoIcon}
-          <span class="text-[#0969da] font-semibold text-base hover:underline truncate">${project.name}</span>
-          <span class="text-xs leading-none border border-[#d0d7de] rounded-full px-2 py-1 text-[#656d76] bg-[#f6f8fa] font-medium">Public</span>
+          <span class="text-[#0969da] font-semibold text-base truncate ${isPrivate ? "" : "hover:underline"}">${project.name}</span>
+          <span class="${badgeClass}">${badgeLabel}</span>
         </div>
 
         <p class="text-sm text-[#656d76] mt-3 line-clamp-2 leading-relaxed flex-1">
