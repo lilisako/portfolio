@@ -2,6 +2,13 @@ import "./style.css";
 
 const projects = [
   {
+    name: "simple-exchange-rate",
+    description: "Super simple exchange rate calculator",
+    url: "https://exchange-rate.tickedo.net",
+    language: "Typescript",
+    languageColor: "#2B7489",
+  },
+  {
     name: "led-banner",
     description: "韓国語対応の電光掲示板アプリ",
     url: "https://led-banner.tickedo.net",
