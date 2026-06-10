@@ -2,6 +2,13 @@ import "./style.css";
 
 const projects = [
   {
+    name: "led-banner",
+    description: "韓国語対応の電光掲示板アプリ",
+    url: "https://led-banner.tickedo.net",
+    language: "Typescript",
+    languageColor: "#2B7489",
+  },
+  {
     name: "teleuni",
     description: "Open-Course study tracker built with Flask",
     language: "Python",
