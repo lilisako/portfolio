@@ -2,6 +2,13 @@ import "./style.css";
 
 const projects = [
   {
+    name: "world-heritage-tracker",
+    description: "World Heritage Tracker",
+    url: "https://world-heritage.tickedo.net",
+    language: "Typescript",
+    languageColor: "#2B7489",
+  },
+  {
     name: "simple-exchange-rate",
     description: "Super simple exchange rate calculator",
     url: "https://exchange-rate.tickedo.net",
